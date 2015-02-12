@@ -1,0 +1,59 @@
+VIA 6522 Bugs 
+-------------
+
+This is an attempt to document the bugs present in MOS technologies VIA6522. For
+some reason this has never been done in great detail, leading to confusing and
+inaccurate emulation.
+
+
+Shift Register Bug:
+-------------------
+
+Due to a design defect, if the edge on CB1 falls within a few nanoseconds of the 
+falling edge of the phi2 (phase–2) clock, the CB1 edge will be ignored, causing 
+the loss of a bit and framing errors on subsequent data. 
+
+As a workaround, put the external clock signal into the D input of a 74AC74 
+flip-flop, run the flop's Q output to the 6522's CB1 pin, and clock the 
+flip-flop with phi0 or phi2.2 
+
+This infamous serial shift register bug was fixed in the California Micro 
+Devices CMD G65SC22. California Micro Devices was acquired by ON Semiconductor.
+
+
+Register corruption Problem:
+----------------------------
+
+Aside from the aforementioned shift register bug, there was a potential register 
+corruption problem that usually only occurred in systems using the 6522 with a 
+microprocessor having a non-6502 bus architecture, such as a Motorola 68000. 
+
+If the address lines changed while chip select was low (inactive) but the phi2 
+clock input was high (active), register contents could be changed despite the 
+fact that the chip was not selected. 
+
+This was fixed in some but not all of the CMOS versions.
+
+Timer Race Conditions:
+----------------------
+
+??? mentioned a few times but never detailed
+
+
+References:
+-----------
+
+https://en.wikipedia.org/wiki/MOS_Technology_6522#Bugs
+https://plus.google.com/108984290462000253857/posts/1Ei3qVWZHwn
+http://visual6502.org/images/pages/MOS_6522.html
+http://forum.6502.org/viewtopic.php?t=40&highlight=wd65c22s
+
+--------------------------------------------------------------------------------
+perhaps related:
+
+http://forum.6502.org/viewtopic.php?f=7&t=342&start=7
+"To get the 6522's T1 running in free-run mode, you must set bit 6 of the ACR 
+before writing to the counters. Then, write to T1's counters to get it started. 
+After that you can write to the latches. (This requirement may not hold for all 
+manufacturers.) It took me a long time to get this going the first time since 
+this information is not in the data books."
