@@ -33,17 +33,63 @@
 
 <hr>
 
+<h2>Commodore C-64</h2>
+
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/c64/">Schematics</a>]
+</small>
+<p>
+<ul>
+<li><a href="C64/64doc.txt">64doc.txt</a></li>
+</ul>
+
+<small>
+uses: 6510 (CPU), 6526 (CIA), 6581/8580 (SID), 6567/6569 (VIC-II), 8701, (PLA)
+</small>
+
+<h2>Commodore C-128</h2>
+
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/c128/">Schematics</a>]
+</small>
+<p>
+<small>
+uses: (CPU), z80 (CPU), 6526 (CIA), 6581/8580 (SID), (VIC-IIe)
+</small>
+
 <h2>Commodore PET</h2>
 
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/pet/">Schematics</a>]
+</small>
+<p>
 <ul>
 <li><a href="PET/PETdoc.txt">PETdoc.txt</a> contains PET information</li>
 </ul>
 
-<h2>Commodore C-64</h2>
+<small>
+uses: 6545 (CRTC), 6522 (VIA)
+</small>
 
-<ul>
-<li><a href="C64/64doc.txt">64doc.txt</a></li>
-</ul>
+<h2>Commodore C-16, C-116, Plus4</h2>
+
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/plus4/">Schematics</a>]
+</small>
+<p>
+<small>
+uses: (TED), 6529 (SPI)
+</small>
+
+<h2>Commodore VIC-20</h2>
+
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/schematics/computers/vic20/">Schematics</a>]
+</small>
+<p>
+<small>
+uses: 6502 (CPU), 6522 (VIA), 6560/6561 (VIC)
+</small>
 
 <hr>
 
@@ -54,7 +100,6 @@
 </ul>
 
 <h2>IEEE bus</h2>
-<small><i>TODO</i></small>
 
 <h2>Commodore Drives</h2>
 
@@ -66,6 +111,10 @@
 
 <h2>CPU</h2>
 
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6510.zip">HMOS 6510 Datasheet</a> (CSG, gif)]
+</small>
+<p>
 <ul>
 <li><a href="CPU/65xxand85xx.txt">65xxand85xx.txt</a></li>
 <li><a href="CPU/65C02.txt">65C02.txt</a></li>
@@ -77,32 +126,83 @@
 
 <hr>
 
-<h2>CIA</h2>
-<small><i>TODO</i></small>
+<h2>CIA (6526)</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6526.zip">6526 Datasheet</a> (MOS, gif)]
+</small>
+<p>
+<small>
+used in: C-64, C-128, 1570, 1571
+</small>
 
-<h2>VIA</h2>
+<h2>SPI (6529)</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6529.zip">NMOS 6529 Datasheet</a> (CSG, gif)]
+</small>
+<p>
+<small>
+used in: C-16, C-116, Plus4
+</small>
+
+<h2>VIA (6522)</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6522.zip">6522 Datasheet</a> (MOS, gif)]
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/sy6522.zip">SY6522 Datasheet</a> (Synertek, gif)]
+</small>
+<p>
 <ul>
 <li><a href="VIA/VIA6522-bugs.txt">VIA6522-bugs.txt</a></li>
 </ul>
-
+<p>
+<small>
+used in: VIC-20, 1540, 1540
+</small>
 <hr>
 
-<h2>SID</h2>
-<small><i>TODO</i></small>
-
+<h2>SID (6581/8580)</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6581.zip">NMOS 6581 Datasheet</a> (MOS, gif)]
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6582/">HMOS 6582 Datasheet</a> (CSG, gif)]
+</small>
+<p>
+<small>
+used in: C-64, C-128, CBM2
+</small>
 <hr>
 
-<h2>CRTC</h2>
-<small><i>TODO</i></small>
+<h2>CRTC (6545, 68B45)</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/c6545.zip">NMOS 6545 Datasheet</a> (MOS, gif)]
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/68b45.zip">MOS 68b45 Datasheet</a> (Motorola, gif)]
+</small>
+<p>
+<small>
+used in: CBM2, PET
+</small>
 
 <h2>TED</h2>
-<small><i>TODO</i></small>
 
-<h2>VIC</h2>
-<small><i>TODO</i></small>
+<p>
+<small>
+used in: Plus4
+</small>
 
-<h2>VIC-II</h2>
+<h2>VIC (6560/6561)</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6560.zip">NMOS 6560/6561 Datasheet</a> (MOS, gif)]
+</small>
+<p>
+<small>
+used in: VIC-20
+</small>
 
+<h2>VIC-II (6567/6569)</h2>
+
+
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/6567.zip">6567 Datasheet</a> (CSG, gif)]
+</small>
+<p>
 <ul>
 <li><a href="VICII/VIC-Article.txt">VIC-Article.txt</a> (english)
 <a href="VICII/VIC-Artikel.txt">VIC-Artikel.txt</a> (german)
@@ -110,7 +210,31 @@ is an indepth description of the inner workings of the VIC-II chip.
 </li>
 <li><a href="VICII/VIC-Addendum.txt">VIC-Addendum.txt</a> contains some additions and corrections to the VIC-Article.</li>
 <li><a href="VICII/pixel_aspect.txt">pixel_aspect.txt</a> contains some information on how the pixel aspect ratio is calculated.</li>
+<li> [<a href="http://unusedino.de/ec64/technical/misc/vic656x/colors/index.html">Color Analysis</a> (Pepto)]
+<li> [Luma levels <a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/656x-luminances.gif">gif</a>,
+  <a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/656x-luminances.txt">txt</a>]
 </ul>
+<p>
+<small>
+used in: C-64, CBM2
+</small>
+
+<hr>
+
+<h2>8701</h2>
+<small>
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/documents/chipdata/8701.zip">8701 Datasheet</a> (MOS, gif)]
+</small>
+<p>
+<small>
+used in: C-64
+</small>
+
+<hr>
+
+ [<a href="http://www.zimmers.net/anonftp/pub/cbm/index.html">Zimmers.net FTP (formerly FUNET)</a>]
+ [<a href="http://codebase64.org">Codebase64</a>]
+ [<a href="http://www.the-dreams.de/aay.html">AAY64/1541/1581</a>]
 
 <hr>
 
