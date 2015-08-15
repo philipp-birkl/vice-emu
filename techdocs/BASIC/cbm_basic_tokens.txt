@@ -27,11 +27,11 @@ PETCAT version 2.20 PL 1					28 May 2010
 	Basic 2.0 with Easy Basic
 	Basic 2.0 with Blarg
 	Basic 2.0 with Game Basic
-      Basic 2.0 with Super Basic
-      Basic 2.0 with Expanded Basic 20
-      Basic 2.0 with Expanded Basic 64
-      Basic 2.0 with Super Expander Chip
-      Basic 2.0 with Warsaw Basic
+	Basic 2.0 with Super Basic
+	Basic 2.0 with Expanded Basic 20
+	Basic 2.0 with Expanded Basic 64
+	Basic 2.0 with Super Expander Chip
+	Basic 2.0 with Warsaw Basic
 	Basic 4.0
 	Basic 4.0 extension for C64
 	Basic 4.0 extension for VIC20
@@ -570,8 +570,9 @@ fe                                          setatr
   Super Basic Keywords (Tokens DB - FE)
   Expanded Basic Keywords (TOKENS CC - F5)
   Warsaw Basic Keywords (TOKENS DB - FE)
+  Data Becker Supergrafik 64 (TOKENS CC - FD)
 
-Token  Game      Basex      SupBas      ExpBas     Warsaw
+Token  Game      Basex      SupBas      ExpBas     Warsaw      Supgraf
 
 cc     window    append                 hires
 cd     bfile     auto                   norm
@@ -585,50 +586,50 @@ d3     proc      delete                 mode
 d4     else      disk                   cls
 d5     scratch   draw                   text
 d6     replace   edge                   color
-d7     device    envelope               gsave
+d7     device    envelope               gsave                  directory
 
-d8     dir       fill                   gload
-d9     repeat    key                    inverse
-da     until     mob                    frame
-db     disk      mode       volume      move         hisave
-dc     fetch#    move       reset       using        sline
-dd     put#      old        mem         renumber     mem
-de     prompt    pic        trace       delete       trace
+d8     dir       fill                   gload                  spower
+d9     repeat    key                    inverse                gcomb
+da     until     mob                    frame                  dtaset
+db     disk      mode       volume      move         hisave    merge
+dc     fetch#    move       reset       using        sline     renum
+dd     put#      old        mem         renumber     mem       key
+de     prompt    pic        trace       delete       trace     trans
 df     pop       dump       basic       box          beep
 
-e0     help      plot       resume      mobdef       resume
-e1     exit      renumber   letter      sprite       letter
-e2     disable   repeat     help        mobset       help
-e3     enter     scroll     coke        mobsize      *****
-e4     reset     sound      ground      mobcolor     ground
-e5     warm      while      matrix      mobmulti     revers
-e6     num       until      dispose     mobmove      dispose
-e7     type      voice      print@      doke         print@
+e0     help      plot       resume      mobdef       resume    tune
+e1     exit      renumber   letter      sprite       letter    sound
+e2     disable   repeat     help        mobset       help      volume=
+e3     enter     scroll     coke        mobsize      *****     filter
+e4     reset     sound      ground      mobcolor     ground    sread
+e5     warm      while      matrix      mobmulti     revers    define
+e6     num       until      dispose     mobmove      dispose   set
+e7     type      voice      print@      doke         print@    swait
 
-e8     text$     ass        himem       allclose     himem
-e9               dis        hardcopy    old          *****
-ea               mem        inputform   auto         line
-eb                          lock        volume       proc
-ec                          swap        envelope     axis
-ed                          using       wave         using
-ee                          sec         play         sec
-ef                          else        case error   else
+e8     text$     ass        himem       allclose     himem     smode
+e9               dis        hardcopy    old          *****     gmode
+ea               mem        inputform   auto         line      gclear
+eb                          lock        volume       proc      gmove
+ec                          swap        envelope     axis      plot
+ed                          using       wave         using     draw
+ee                          sec         play         sec       fill
+ef                          else        case error   else      frame
 
-f0                          error       resume       error
-f1                          round       no error     round
-f2                          deek        find         ****
-f3                          string$     inkey        *******
-f4                          point       merge        *****
-f5                          instr       hardcopy     *****
-f6                          ceek                     pound
-f7                          min                      min
+f0                          error       resume       error     invers
+f1                          round       no error     round     text
+f2                          deek        find         ****      circle
+f3                          string$     inkey        *******   paddle
+f4                          point       merge        *****     scale=
+f5                          instr       hardcopy     *****     color=
+f6                          ceek                     pound     scol=
+f7                          min                      min       pcol=
 
-f8                          max                      max
-f9                          varptr                   *****
-fa                          frac                     frac
-fb                          odd                      odd
-fc                          dec                      ***
-fd                          hex$                     heek
+f8                          max                      max       gsave
+f9                          varptr                   *****     gload
+fa                          frac                     frac      hcopy
+fb                          odd                      odd       ireturn
+fc                          dec                      ***       if#
+fd                          hex$                     heek      paint
 fe                          eval                     eval
 
 
