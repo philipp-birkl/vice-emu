@@ -32,6 +32,9 @@ PETCAT version 2.20 PL 1					28 May 2010
 	Basic 2.0 with Expanded Basic 64
 	Basic 2.0 with Super Expander Chip
 	Basic 2.0 with Warsaw Basic
+	Basic 2.0 with Data Becker Supergrafik 64
+	Basic 2.0 with Kipper Basic
+	Basic 2.0 with Basic on Bails
 	Basic 4.0
 	Basic 4.0 extension for C64
 	Basic 4.0 extension for VIC20
@@ -633,7 +636,34 @@ fd                          hex$                     heek      paint
 fe                          eval                     eval
 
 
- Simon's Basic Keywords
+  Kipper Basic (TOKENS E1 - F2)
+  Basic on Bails (TOKENS E1 - F0)
+
+Token  Kipper       BoB
+
+e1     ipcfg        ipcfg
+e2     dhcp         dhcp
+e3     ping         ping
+e4     myip         myip
+e5     netmask      netmask
+e6     gateway      gateway
+e7     dns          dns
+
+e8     tftp         hook
+e9     tfget        yield
+ea     tfput        xsend
+eb     netcat       !
+ec     tcpconnect   httpd
+ed     poll         type
+ee     tcplisten    status
+ef     tcpsend      flush
+
+f0     tcpclose     mac
+f1     tcpblat
+f2     mac
+
+ 
+Simon's Basic Keywords
 
 Token	Keyword
 
