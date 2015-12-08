@@ -35,6 +35,8 @@ PETCAT version 2.20 PL 1					28 May 2010
 	Basic 2.0 with Data Becker Supergrafik 64
 	Basic 2.0 with Kipper Basic
 	Basic 2.0 with Basic on Bails
+	Basic 2.0 with Eve Basic
+        Basic 2.0 with The Tool 64
 	Basic 4.0
 	Basic 4.0 extension for C64
 	Basic 4.0 extension for VIC20
@@ -150,6 +152,98 @@ cb	go	(Basic 2.0 and higher only)
 ff	pi
 
 
+Applesoft Basic for C64 uses the same range as normal basic,
+but replaces some tokens with different keywords:
+
+Token	Keyword
+
+80	end
+81	for
+82	next
+83	data
+84	invers
+85	input
+86	dim
+87	read
+
+88	hgr
+89	goto
+8a	run
+8b	if
+8c	restore
+8d	gosub
+8e	return
+8f	rem
+
+90	vtab
+91	ca
+92	home
+93	load
+94	save
+95	normal
+96	def
+97	poke
+
+98	hcolor
+99	print
+9a	htab
+9b	list
+9c	clr
+9d	dra
+9e	sys
+9f	text
+
+a0	hplot
+a1	get
+a2	new
+a3	tab(
+a4	to
+a5	fn
+a6	spc(
+a7	then
+
+a8	not
+a9	step
+aa	+
+ab	-
+ac	*
+ad	/
+ae	^
+af	and
+
+b0	or
+b1	>
+b2	=
+b3	<
+b4	sgn
+b5	int
+b6	abs
+b7	usr
+
+b8	fre
+b9	pos
+ba	sqr
+bb	rnd
+bc	log
+bd	exp
+be	cos
+bf	sin
+
+c0	tan
+c1	atn
+c2	peek
+c3	len
+c4	str$
+c5	val
+c6	asc
+c7	chr$
+
+c8	left$
+c9	right$
+ca	mid$
+cb	go
+
+ff	pi
 
   Extension Keywords (Tokens CC - FE)
 
@@ -638,29 +732,63 @@ fe                          eval                     eval
 
   Kipper Basic (TOKENS E1 - F2)
   Basic on Bails (TOKENS E1 - F0)
+  Eve Basic (TOKENS CC - F9)
+  The Tool 64 (TOKENS DB - F4)
 
-Token  Kipper       BoB
+Token  Kipper       BoB       Eve        TT64
 
-e1     ipcfg        ipcfg
-e2     dhcp         dhcp
-e3     ping         ping
-e4     myip         myip
-e5     netmask      netmask
-e6     gateway      gateway
-e7     dns          dns
+cc                            else
+cd                            page
+ce                            paper
+cf                            ink
 
-e8     tftp         hook
-e9     tfget        yield
-ea     tfput        xsend
-eb     netcat       !
-ec     tcpconnect   httpd
-ed     poll         type
-ee     tcplisten    status
-ef     tcpsend      flush
+d0                            locate
+d1                            erase
+d2                            graphic
+d3                            scale
+d4                            pen
+d5                            point
+d6                            line
+d7                            paint
 
-f0     tcpclose     mac
-f1     tcpblat
-f2     mac
+d8                            write
+d9                            draw
+da                            image
+db                            sprite
+dc                            sprpic     sort
+dd                            sprcol     extract
+de                            sprloc     carget
+df                            sprmulti
+
+e0                            tone
+e1     ipcfg        ipcfg     envelope   screen
+e2     dhcp         dhcp      wave       graphic
+e3     ping         ping      vol        text
+e4     myip         myip      filter     auto
+e5     netmask      netmask   dos        find
+e6     gateway      gateway   dvc        dump
+e7     dns          dns       dir        error
+
+e8     tftp         hook      cat        renu
+e9     tfget        yield     record#    delete
+ea     tfput        xsend     swap       plot
+eb     netcat       !         exit       point
+ec     tcpconnect   httpd     do         draw
+ed     poll         type      loop       move
+ee     tcplisten    status    while      color
+ef     tcpsend      flush     until      else
+
+f0     tcpclose     mac       cur        display
+f1     tcpblat                bin$       trace
+f2     mac                    mak$       off
+f3                            input$     hcopy
+f4                            fmt$       joy
+f5                            infix$
+f6                            instr
+f7                            ds$
+
+f8                            ds
+f9                            sd
 
  
 Simon's Basic Keywords
