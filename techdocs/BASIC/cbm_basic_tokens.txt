@@ -36,7 +36,7 @@ PETCAT version 2.20 PL 1					28 May 2010
 	Basic 2.0 with Kipper Basic
 	Basic 2.0 with Basic on Bails
 	Basic 2.0 with Eve Basic
-        Basic 2.0 with The Tool 64
+	Basic 2.0 with The Tool 64
 	Basic 4.0
 	Basic 4.0 extension for C64
 	Basic 4.0 extension for VIC20
@@ -938,4 +938,3 @@ Token	Keyword
 647d	display
 647e	err
 647f	out
-
