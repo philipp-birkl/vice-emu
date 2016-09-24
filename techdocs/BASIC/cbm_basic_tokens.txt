@@ -437,35 +437,36 @@ fe3d                              highlight
  Mighty Basic      Keywords (Tokens CC - FE)
  Easy Basic        Keywords (Tokens CC - FE)
  Expanded Basic    Keywords (Tokens CC - E3)
+ Handy Basic       Keywords (Tokens CC - E1)
 
-Token  Turtle   Mighty     Easy        ExpBas
+Token  Turtle   Mighty     Easy        ExpBas   Handy
 
-cc     graphic  delete     delete      reset
-cd     old      old        old         sound
-ce     turn     renumber   renumber    slow(
-cf     pen      help       dump        com
+cc     graphic  delete     delete      reset    move
+cd     old      old        old         sound    pop
+ce     turn     renumber   renumber    slow(    else
+cf     pen      help       dump        com      volume
 
-d0     draw     header     merge       mem
-d1     move     move       plot        stat(
-d2     point    trace      trace       key
-d3     kill     kill       kill        off
-d4     write    dump       help        col(
-d5     repeat   dsave      dload       plot(
-d6     screen   dload      dsave       pop(
-d7     doke     dverify    dverify     chol(
+d0     draw     header     merge       mem      pause
+d1     move     move       plot        stat(    base
+d2     point    trace      trace       key      reset
+d3     kill     kill       kill        off      copychr
+d4     write    dump       help        col(     color
+d5     repeat   dsave      dload       plot(    sound
+d6     screen   dload      dsave       pop(     fill
+d7     doke     dverify    dverify     chol(    beep
 
-d8     reloc    dresave    append      curol(
-d9     fill     scratch    screen      beep(
-da     rtime    directory  directory   paus(
-db     base     key        key         msav
-dc     pause    send       send        reg(
-dd     pop      pop        pop         dpek(
-de     color    off        off         pdl
-df     merge    bsave      pout        joy
+d8     reloc    dresave    append      curol(   put
+d9     fill     scratch    screen      beep(    take
+da     rtime    directory  directory   paus(    accept
+db     base     key        key         msav     kill
+dc     pause    send       send        reg(     rtime
+dd     pop      pop        pop         dpek(    cls
+de     color    off        off         pdl      old
+df     merge    bsave      pout        joy      rkey
 
-e0     char     bload      header      dpok
-e1     take     find       find        do
-e2     sound    auto       auto        until
+e0     char     bload      header      dpok     joy
+e1     take     find       find        do       grab
+e2     sound    auto       auto        until    
 e3     vol      pprint     pprint      old
 e4     put      accept     accept
 e5     place    reset      reset
